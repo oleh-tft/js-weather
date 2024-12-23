@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Прогноз погоди</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        padding: 2rem;
+    }
+
+    #parse {
+        margin-bottom: 20px;
+    }
+
+    table {
+        border-collapse: collapse;
+        border: 2px solid gainsboro;
+    }
+
+    tr {
+        border-bottom: 2px solid gainsboro;
+    }
+
+    td, th {
+        background-color: rgb(255, 255, 238);
+    }
+
+    td:nth-child(even) {
+        background-color: rgb(238, 250, 255);
+    }
+
+    td, th {
+        padding: 1rem;
+        text-align: center;
+    }
+
+    .desc {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+</style>
+
+<body>
+    <form action="parse" id="parse">
+        <label for="textCity">Назва міста</label>
+        <input type="text" name="textCity" id="textCity">
+        <button type="button" id="add">Додати</button>
+    </form>
+    <table id="weather" style="display: none;">
+        <tr>
+            <th>Місто</th>
+            <th>Температура</th>
+            <th>Відчувається як</th>
+            <th>Опис</th>
+            <th>Вологість</th>
+            <th>Світанок</th>
+        </tr>
+    </table>
+
+    <script src="./script.js"></script>
+</body>
+
+</html>
